@@ -1,6 +1,8 @@
-import Toybox.Lang;
-import Toybox.WatchUi;
-import Toybox.Graphics;
+using Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.Graphics;
+using Toybox.System as Sys;
+
 
 class TelegramMessageAppView extends WatchUi.View {
     
@@ -16,6 +18,7 @@ class TelegramMessageAppView extends WatchUi.View {
 
     // Update the view
 	function onUpdate(dc) {
+		Sys.println("TelegramMessageAppView.onUpdate()");
         // Draw the background
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
 
@@ -30,6 +33,7 @@ class TelegramMessageAppView extends WatchUi.View {
 	}
 
     function displayMessage(dc, message) {
+		Sys.println("TelegramMessageAppView.displayMessage()");
 		dc.setColor (Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
 		dc.clear();
 		dc.drawText(

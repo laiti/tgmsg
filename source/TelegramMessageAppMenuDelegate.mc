@@ -7,6 +7,8 @@ class TelegramMessageAppMenuDelegate extends Ui.MenuInputDelegate {
     }
 
     function onMenuItem(item) {
+        Sys.println("TelegramMessageAppMenuDelegate()");
+
         if (item == :message_1) {
             TelegramMessage.messageId = 1;
         } else {
