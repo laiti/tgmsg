@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Simulate",
+			"dependsOn": [
+				"Start Simulator",
+				"Bind PRG"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "Start Simulator",
+			"command": "connectiq",
+			"isBackground": true
+		},
+		{
+			"type": "shell",
+			"label": "Bind PRG",
+			"command": "\"\monkeydo\" \"bin/tgmsg.prg\" \"venu2\"",
+			"isBackground": true
+		}
+	]
+}
