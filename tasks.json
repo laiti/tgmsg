@@ -2,11 +2,14 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "Simulate",
-			"dependsOn": [
-				"Start Simulator",
-				"Bind PRG"
-			],
+			"type": "shell",
+			"label": "Build",
+			"command": "\"monkeyc\" \"-f\" \"monkey.jungle\" \"-o\" \"bin/tgmsg.prg\" \"-y\" \"/Users/laiti/Documents/keys/garmin_developer_key\" \"-d\" \"venu2_sim\" \"-w\"",
+			"isBackground": true
+		}
+		{
+			"label": "Build and simulate",
+			"dependsOn": ["Start simulator", "Bind PRG"],
 			"group": {
 				"kind": "build",
 				"isDefault": true
@@ -14,14 +17,15 @@
 		},
 		{
 			"type": "shell",
-			"label": "Start Simulator",
+			"label": "Start simulator",
 			"command": "connectiq",
 			"isBackground": true
 		},
 		{
 			"type": "shell",
 			"label": "Bind PRG",
-			"command": "\"\monkeydo\" \"bin/tgmsg.prg\" \"venu2\"",
+			"dependsOn": ["Build"],
+			"command": "\"monkeydo\" \"bin/tgmsg.prg\" \"venu2\"",
 			"isBackground": true
 		}
 	]
