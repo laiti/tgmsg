@@ -7,6 +7,7 @@ using Toybox.System as Sys;
 class TelegramMessageAppView extends WatchUi.View {
     
     function initialize() {
+		Sys.println("TelegramMessageAppView.onUpdate().initialize");
 		View.initialize();
 	}
 
