@@ -3,6 +3,7 @@ using Toybox.System as Sys;
 
 class TelegramMessageAppMenuDelegate extends Ui.MenuInputDelegate {
     function initialize() {
+        Sys.println("TelegramMessageAppMenuDelegate().initialize");
         MenuInputDelegate.initialize();
     }
 
