@@ -6,7 +6,7 @@
 			"label": "Build",
 			"command": "\"monkeyc\" \"-f\" \"monkey.jungle\" \"-o\" \"bin/tgmsg.prg\" \"-y\" \"/Users/laiti/Documents/keys/garmin_developer_key\" \"-d\" \"venu2_sim\" \"-w\"",
 			"isBackground": true
-		}
+		},
 		{
 			"label": "Build and simulate",
 			"dependsOn": ["Start simulator", "Bind PRG"],
